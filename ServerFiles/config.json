@@ -1,6 +1,7 @@
 {
   "Config": {
     "Token": "",
-    "AIServerEndpoint": "http://localhost:8080/v1/chat/completions"
+    "AIServerEndpoint": "http://localhost:8080/v1/chat/completions",
+    "AIKey": ""
   }
 }
