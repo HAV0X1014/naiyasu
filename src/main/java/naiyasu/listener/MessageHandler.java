@@ -82,6 +82,7 @@ public class MessageHandler extends ListenerAdapter {
                                     }
                                 }
                             });
+                            chat.setDaemon(true);
                             chat.start();
                             //if we have chatted, prevent idle messages from being sent for the next 10-15 minutes
                             character.getLockout().startLockout();

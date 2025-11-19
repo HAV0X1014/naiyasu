@@ -42,6 +42,11 @@ public class ActivityBlock {
                 '}';
     }
 
+    /**
+     * Takes a string formatted like 10:21 or 4:37 and converts it into a LocalTime object.
+     * @param timeString String of the time, formatted HH:mm or H:mm.
+     * @return LocalTime
+     */
     public static LocalTime parseLocalTime(String timeString) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("H:mm"); // Allow single digit hours
         try {
@@ -55,7 +60,6 @@ public class ActivityBlock {
             catch (DateTimeParseException e2){
                 throw new DateTimeParseException("Invalid time format. Expected HH:mm or H:mm", timeString, e.getErrorIndex(), e);
             }
-
         }
     }
 
